@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtVibe - Discover Creativity</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-palette me-2"></i>ArtVibe
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Join Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-gold ms-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="fas fa-user me-1"></i>Login
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Theater Performance" class="hero-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title fade-in-up">Experience Art, Live Entertainment</h1>
+                    <p class="hero-subtitle fade-in-up-delay">Discover the most captivating performances, exhibitions, and cultural experiences in your city</p>
+                    <div class="hero-buttons fade-in-up-delay-2">
+                        <a href="events.html" class="btn btn-primary btn-lg me-3">
+                            <i class="fas fa-calendar-alt me-2"></i>Explore Events
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-gold btn-lg">
+                            <i class="fas fa-star me-2"></i>Join as Artist
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Highlights Carousel -->
+    <section class="highlights-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title text-center mb-5">Featured Highlights</h2>
+                    <div id="highlightsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#highlightsCarousel" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#highlightsCarousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#highlightsCarousel" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="highlight-card" style="background-image: url('https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop')">
+                                    <div class="highlight-overlay">
+                                        <h3>Symphony Orchestra Night</h3>
+                                        <p>Experience classical music at its finest</p>
+                                        <button class="btn btn-light">Learn More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="highlight-card" style="background-image: url('https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop')">
+                                    <div class="highlight-overlay">
+                                        <h3>Modern Art Exhibition</h3>
+                                        <p>Explore contemporary masterpieces</p>
+                                        <button class="btn btn-light">Learn More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="highlight-card" style="background-image: url('https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop')">
+                                    <div class="highlight-overlay">
+                                        <h3>Jazz Festival</h3>
+                                        <p>Three days of incredible jazz performances</p>
+                                        <button class="btn btn-light">Learn More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#highlightsCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#highlightsCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="events-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Upcoming Events</h2>
+                    <p class="section-subtitle">Don't miss these amazing performances</p>
+                </div>
+            </div>
+            <div class="row" id="upcomingEvents">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Theater Show">
+                            <div class="event-date">
+                                <span class="date-day">15</span>
+                                <span class="date-month">DEC</span>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h4>Shakespeare's Hamlet</h4>
+                            <p class="event-location"><i class="fas fa-map-marker-alt me-2"></i>Royal Theater</p>
+                            <p class="event-description">A captivating performance of the classic tragedy</p>
+                            <div class="event-footer">
+                                <span class="event-price">From $45</span>
+                                <button class="btn btn-primary btn-sm">Get Tickets</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Orchestra">
+                            <div class="event-date">
+                                <span class="date-day">22</span>
+                                <span class="date-month">DEC</span>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h4>Christmas Symphony</h4>
+                            <p class="event-location"><i class="fas fa-map-marker-alt me-2"></i>City Concert Hall</p>
+                            <p class="event-description">Holiday classics performed by renowned orchestra</p>
+                            <div class="event-footer">
+                                <span class="event-price">From $65</span>
+                                <button class="btn btn-primary btn-sm">Get Tickets</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Art Gallery">
+                            <div class="event-date">
+                                <span class="date-day">28</span>
+                                <span class="date-month">DEC</span>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h4>Modern Art Showcase</h4>
+                            <p class="event-location"><i class="fas fa-map-marker-alt me-2"></i>Metropolitan Gallery</p>
+                            <p class="event-description">Contemporary works from emerging artists</p>
+                            <div class="event-footer">
+                                <span class="event-price">From $25</span>
+                                <button class="btn btn-primary btn-sm">Get Tickets</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="events.html" class="btn btn-outline-primary btn-lg">View All Events</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Artists -->
+    <section class="artists-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Featured Artists</h2>
+                    <p class="section-subtitle">Meet the talented individuals behind the magic</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" alt="Sarah Johnson">
+                            <div class="artist-overlay">
+                                <h5>Sarah Johnson</h5>
+                                <p>Contemporary painter known for vibrant abstract works</p>
+                                <div class="artist-social">
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="artist-info">
+                            <h5>Sarah Johnson</h5>
+                            <p class="artist-role">Visual Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" alt="Marcus Chen">
+                            <div class="artist-overlay">
+                                <h5>Marcus Chen</h5>
+                                <p>Jazz musician and composer with 20+ years experience</p>
+                                <div class="artist-social">
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="artist-info">
+                            <h5>Marcus Chen</h5>
+                            <p class="artist-role">Musician</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" alt="Elena Rodriguez">
+                            <div class="artist-overlay">
+                                <h5>Elena Rodriguez</h5>
+                                <p>Award-winning theater director and playwright</p>
+                                <div class="artist-social">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="artist-info">
+                            <h5>Elena Rodriguez</h5>
+                            <p class="artist-role">Theater Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" alt="David Wilson">
+                            <div class="artist-overlay">
+                                <h5>David Wilson</h5>
+                                <p>Contemporary dancer and choreographer</p>
+                                <div class="artist-social">
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="artist-info">
+                            <h5>David Wilson</h5>
+                            <p class="artist-role">Dancer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title text-white mb-3">Stay in the Loop</h2>
+                    <p class="section-subtitle text-white mb-4">Get the latest updates on events, artists, and exclusive offers</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email address" required>
+                            <button class="btn btn-gold" type="submit">
+                                <i class="fas fa-paper-plane me-2"></i>Subscribe
+                            </button>
+                        </div>
+                    </form>
+                    <small class="text-white-50 mt-2 d-block">We respect your privacy. Unsubscribe at any time.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="footer-title">
+                        <i class="fas fa-palette me-2"></i>ArtVibe
+                    </h5>
+                    <p class="footer-text">Connecting artists and audiences through unforgettable cultural experiences.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-subtitle">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html">Join Us</a></li>
+                        <li><a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="footer-subtitle">Categories</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Theater</a></li>
+                        <li><a href="#">Music</a></li>
+                        <li><a href="#">Art Exhibitions</a></li>
+                        <li><a href="#">Dance</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="footer-subtitle">Contact</h6>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone me-2"></i>(555) 123-4567</p>
+                        <p><i class="fas fa-envelope me-2"></i>hello@artvibe.com</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>123 Arts District, City</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="footer-copyright">&copy; 2025 ArtVibe. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="footer-legal">Privacy Policy</a>
+                    <a href="#" class="footer-legal">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Welcome Back</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mb-3">Sign In</button>
+                        <div class="text-center">
+                            <p class="mb-0">Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Sign up</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Join ArtVibe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="mb-3">
+                            <label for="registerName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="registerName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="registerEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="registerPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="registerConfirmPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                            <label class="form-check-label" for="agreeTerms">I agree to the terms and conditions</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mb-3">Create Account</button>
+                        <div class="text-center">
+                            <p class="mb-0">Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Sign in</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
